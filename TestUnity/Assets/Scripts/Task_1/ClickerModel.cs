@@ -10,8 +10,10 @@ public class ClickerModel
         set
         {
             if (m_Score != value)
+            {
                 OnScoreUpdated?.Invoke(value);
-            m_Score = value;
+                m_Score = value;
+            }
         }
     }
 }

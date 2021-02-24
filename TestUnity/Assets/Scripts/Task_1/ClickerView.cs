@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ClickerView
 {
@@ -23,9 +22,5 @@ public class ClickerView
         GUILayout.Label(m_Label);
         if (GUILayout.Button("Click!"))
             m_Controller.IncrementScore();
-        if (GUILayout.Button("Next scene"))
-        {
-            SceneManager.LoadScene("Task_2");
-        }
     }
 }

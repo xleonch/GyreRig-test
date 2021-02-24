@@ -6,14 +6,12 @@ public class DoomedCube : MonoBehaviour
 
     protected void Start()
     {
-        // t = s / v
         var lifetime = distance / velocity;
         Destroy(gameObject, lifetime);
     }
 
     public void Update()
     {
-        // x = v * t
         transform.position += velocity * Time.deltaTime * transform.forward;
     }
 }

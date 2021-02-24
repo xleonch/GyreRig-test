@@ -33,9 +33,7 @@ public class CubeMovement : MonoBehaviour
     protected void OnGUI()
     {
         if (SceneManager.GetActiveScene().name == "Task_1")
-        {
             GUI.enabled = false;
-        }
         else
         {
             Input(ref m_InputDistance);
@@ -54,6 +52,9 @@ public class CubeMovement : MonoBehaviour
                 currentProcess = DelayedSpawn(m_InputDelay.value, m_InputVelocity.value, m_InputDistance.value);
                 StartCoroutine(currentProcess);
             }
+            GUI.enabled = true;
+            if (GUILayout.Button("Change scene"))
+                SceneManager.LoadScene("Task_1");
         }
     }
 
@@ -75,18 +76,13 @@ public class CubeMovement : MonoBehaviour
 
     public IEnumerator DelayedSpawn(float creationDelay, float velocity, float distance)
     {
-        //Debug.Log("Spawned");
         while (true)
         {
-            //Debug.Log("Delay: " + creationDelay);
             yield return new WaitForSeconds(creationDelay);
-            //Debug.Log("Coroutine Iteration success at" + creationDelay);
 
             var cube = Instantiate(prefab);
             cube.velocity = velocity;
-            //Debug.Log("Assigned Velocity");
             cube.distance = distance;
-            //Debug.Log("Assigned Distance");
         }
     }
 }

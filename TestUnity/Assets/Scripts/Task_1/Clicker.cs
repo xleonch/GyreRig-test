@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Clicker : MonoBehaviour
 {
@@ -14,5 +15,7 @@ public class Clicker : MonoBehaviour
     protected void OnGUI()
     {
         m_View.Update();
+        if (GUILayout.Button("Change scene"))
+            SceneManager.LoadScene("Task_2");
     }
 }
