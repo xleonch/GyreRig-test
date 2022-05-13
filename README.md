@@ -1,7 +1,5 @@
-# TestUnity
-Coding task repository for UnityDev_Test file
-
-for Gyre Rig
+# GyreRig-test
+Coding task repository for Gyre Rig
 
 # Задание 1 
 Необходимо разработать элементарную игру-кликер. В игре присутствует один UI-экран,  состоящий из кнопки и текстового поля. Пользователь кликает по кнопке. В текстовом поле  выводится кол-во кликов.  
